@@ -22,7 +22,9 @@ jobs:
         run: npm ci
       - name: Run server
         continue-on-error: true
-        run: npm start
+        run: |
+          npm start &
+          sleep 10 
       - name: Run tests
         run: npm test
       - name: Output information
