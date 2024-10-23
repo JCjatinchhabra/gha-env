@@ -22,7 +22,7 @@ jobs:
         run: npm ci
       - name: Run server
         continue-on-error: true
-        run: npm start & npx wait-on http://127.0.0.1:80
+        run: npm start
       - name: Run tests
         run: npm test
       - name: Output information
